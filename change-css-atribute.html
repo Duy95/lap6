@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="greeting">hello c7</p>
+    <button onclick="hiddentext()">Hidden Test</button>
+    <button onclick="visibletext()">Visible Text</button>
+    <button onclick="makecolor()">make color</button>
+    <button onclick="clearcolor()">clear color</button>
+    <script>
+      function hiddentext() {
+        document.getElementById("greeting").style.visibility = "hidden";
+      }
+      function visibletext() {
+        document.getElementById("greeting").style.visibility = "visible";
+      }
+      function makecolor() {
+        document.getElementById("greeting").style.backgroundcolor = "red";
+      }
+      function clearcolor() {
+        document.getElementById("greeting").style.color = "black";
+        document.getElementById("greeting").style.backgroundcolor = "white";
+      }
+    </script>
+  </body>
+</html>

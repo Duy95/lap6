@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits + "<br>");
+
+      //Thêm 1 hoặc nhiều phần tử tại vị trí bất kỳ, 
+      // không xóa phần tử tại vị trí đang xét
+      fruits.splice(2, 0, "Lemon", "Kiwi"); //["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+      document.write(fruits + "<br>");
+
+      //Thay thế 1 hoặc nhiều phần tử tại vị trí bất kỳ, 
+      // có xóa phần tử tại vị trí đang xét
+      fruits.splice(2, 1, "Cherry"); //["Banana", "Orange", "Cherry", "Kiwi", "Apple", "Mango"]
+      document.write(fruits + "<br>");
+
+      fruits.splice(2, 1, "Durian", "Dragon Fruit"); 
+      //["Banana", "Orange", "Durian", "Dragon Fruit", "Kiwi", "Apple", "Mango"]
+      document.write(fruits + "<br>");
+      </script>
+</body>
+</html>

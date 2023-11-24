@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+#menu {
+  list-style-type: none;
+  background-color: black;
+  padding: 10px;
+}
+.menu-item {
+  display: inline-block;
+  color: white;
+  padding: 15px;
+}
+.search-from .search-input{
+ padding: 5px 15px;
+ margin:  10px 10px 0 0 ;
+}
+
+.main{ 
+margin: 10px;
+}
+.active {
+  background-color: #1fc61f;
+}
+.content {
+  margin: 5px;
+}
+#loginBtn {
+  width: auto%;
+}

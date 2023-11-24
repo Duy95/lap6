@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>funtion & array</title>
+  </head>
+  <body>
+    <!-- <script>
+      var c = 7;
+      function testAB(start, end) {
+        console.log("c inner func: " + c); //7
+        var a = 5;
+        if (3 > 2) {
+          var b = 9;
+          console.log("c inner func, in if: " + c); //7
+          console.log("a inner if: " + a); //5
+          console.log("b: " + b); //9
+        }
+        console.log("a out of if, in func: " + a); //5
+      }
+      testAB();
+      console.log("c out of func: " + c); //7
+      console.log("a out of func: " + a); //error
+    </script> -->
+    <script>
+      //example about declare variable with let
+      let c = 7;
+      function testAB() {
+        console.log("c inner func: " + c); //7
+        let a = 5;
+        if (3 > 2) {
+          let b = 9;
+          console.log("c inner func, in if: " + c); //7
+          console.log("a inner if: " + a); //5
+          console.log("b: " + b); //9
+        }
+        for (let i = 0; i < 3; i++) {
+          console.log("---");
+        }
+        // console.log("i out of for, in func: " + i);//error
+        console.log("a out of if, in func: " + a); //5
+      }
+      testAB();
+      console.log("c out of func: " + c); //7
+      console.log("a out of func: " + a); //error
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    
+    <script>
+      function kiem_tra_snt(n) {
+        var flag = true;
+        if (n < 2) {
+          flag = false;
+        }
+        if ((n = 2)) {
+          flag = true;
+        } else {
+          for (var i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+              flag = false;
+              break;
+            }
+          }
+        }
+        if (flag == true) {
+          document.write(n + " là số nguyên tố <br/>");
+        } else {
+          document.write(n + " không phải là số nguyên tố <br/>");
+        }
+      }
+      const inputNumber = parseInt(prompt("Nhập một số nguyên dương:"));
+      kiem_tra_snt(inputNumber);
+      // Gọi hàm để kiểm tra số nguyên tố
+      
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hello JS DOM</h2>
+    <p id="Fullname">Nguyen Van Teo</p>
+    <!-- ul#menu>li.menu-item{html}*5 -->
+    <ul id="menu">
+      <li class="menu-item">HTML</li>
+      <li class="menu-item">CSS</li>
+      <li class="menu-item">JS</li>
+      <li class="menu-item">REACTJS</li>
+      <li class="menu-item">NodeJS</li>
+    </ul>
+    <script>
+      var Fullname = document.getElementById("Fullname");
+      document.write("My Full name is: " + Fullname.innerHTML);
+
+      //   var litag = document.getElementsByClassName("menu-item");
+      //   console.log(litags);
+
+      //   var ultag = document.querySelectorAll("menu");
+      //   console.log(ultag2);
+
+      //   var litag2 = document.querySelectorAll("menu-item");
+      //   console.log(litag2);
+
+      document.write(new Date());
+    </script>
+  </body>
+</html>

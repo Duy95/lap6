@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lap 06</title>
+    <link style="text/css" rel="stylesheet" href="./css/menu.css" />
+    <link style="text/css" rel="stylesheet" href="./css/modal.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: large;
+      }
+      #menu {
+        list-style-type: none;
+        background-color: black;
+        padding: 10px;
+      }
+      .menu-item {
+        display: inline-block;
+        color: white;
+        padding: 15px;
+      }
+      .search-from {
+        color: rgb(255, 255, 255);
+        float: right;
+      }
+
+      .search-input {
+        float: right;
+        padding: 5px 15px;
+        margin: 0px 5px 0 0;
+      }
+      .active {
+        background-color: #1fc61f;
+      }
+      .content {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li
+        class="menu-item active"
+        onmouseout="outMenuitem(this)"
+        onmouseover="hoverMenuitem(this)"
+      >
+        trang chủ
+      </li>
+      <li
+        class="menu-item"
+        onmouseout="outMenuitem(this)"
+        onmouseover="hoverMenuitem(this)"
+      >
+        giới thiệu
+      </li>
+      <li
+        class="menu-item"
+        onmouseout="outMenuitem(this)"
+        onmouseover="hoverMenuitem(this)"
+      >
+        bài viết
+      </li>
+      <li
+        class="menu-item"
+        onmouseout="outMenuitem(this)"
+        onmouseover="hoverMenuitem(this)"
+      >
+        liên lạc
+      </li>
+      <span class="search-input">
+        <input
+          class="search-input"
+          placeholder="tìm kiếm"
+          type="text"
+          name="search"
+          id="search"
+        />
+      </span>
+    </ul>
+    <main>
+      <h1>Ví dụ thao tác JavaScript với HTML, CSS</h1>
+      <p class="content">Nội dung đang cập nhật...</p>
+      <button
+        id="loginBtn"
+        type="button"
+        onclick="document.getElementById('loginModal').style.display='block'"
+      >
+        Đăng nhập
+      </button>
+
+      <div id="loginModal" class="modal">
+        <form class="modal-content animate" action="#" method="post">
+          <div class="imgcontainer">
+            <span
+              onclick="document.getElementById('loginModal').style.display='none'"
+              class="close"
+              title="Close Modal"
+              >&times;</span
+            >
+            <img src="./image/image.jpg" alt="Avatar" class="avatar" />
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Tài khoản</b></label>
+            <input
+              type="text"
+              placeholder="Nhập tài khoản"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input
+              type="password"
+              placeholder="Nhập mật khẩu"
+              name="psw"
+              required
+            />
+
+            <button onclick="login()">Đăng nhập</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Ghi nhớ tôi?
+            </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button
+              type="button"
+              onclick="document.getElementById('loginModal').style.display='none'"
+              class="cancelbtn"
+            >
+              Hủy
+            </button>
+            <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      // create a new keyboard event and set the key to "Enter"
+      const onEnter = new KeyboardEvent("keydown", {
+        key: "Enter",
+        code: "Enter",
+        which: 13,
+        keyCode: 13,
+      });
+
+      // dispatch the event on some DOM element
+      document.getElementById("myInput").dispatchEvent(event);
+      function hoverMenuitem(currentTag) {
+        currentTag.style.backgroundColor = "#f2f2f2";
+        currentTag.style.color = "black";
+      }
+      function outMenuitem(currentTag) {
+        var activeClass = currentTag.classList[0];
+        if (activeClass === "active") {
+          currentTag.style.backgroundColor = "#1fc61f";
+          currentTag.style.color = "white";
+        } else {
+          currentTag.style.backgroundColor = "black";
+          currentTag.style.color = "white";
+        }
+      }
+      function login() {
+        var username = document.getElementsByName("uname")[0].value;
+        var password = document.getElementsByName("psw")[0].value;
+        if (username === "admin" && password === "123456") {
+          alert("đăng nhập thành công!");
+          document.getElementById("loginModal").style.display = "none";
+        } else {
+          alert("sai thông tin đăng nhập,vui lòng đăng nhập lại!");
+        }
+      }
+    </script>
+  </body>
+</html>

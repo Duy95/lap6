@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = ["Tý", "Tèo", "Tồ"];
+      document.write(a + "<br>"); //["Tý", "Tèo", "Tồ"]
+
+      document.write(a[1] + "<br>"); //"Tèo"
+      a[1] = "Bin";
+      document.write(a + "<br>"); //["Tý", "Bin", "Tồ"]
+
+      //Add last/first
+      a.push("Bo");
+      document.write(a + "<br>"); //["Tý", "Bin", "Tồ", "Bo"]
+      a.unshift("Bi");
+      document.write(a + "<br>"); //["Bi", "Tý", "Bin", "Tồ", "Bo"]
+
+      //Remove last/first
+      a.pop();
+      document.write(a + "<br>"); //["Bi", "Tý", "Bin", "Tồ"]
+      a.shift();
+      document.write(a + "<br>"); //["Tý", "Bin", "Tồ"]
+      
+    </script>
+  </body>
+</html>
